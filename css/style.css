@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+
+ head {
+     position:fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+ }
+
+
+
+body{
+	font-family:arial;
+	font-size:17px;
+	line-height:1.5em;
+	color:#C0C0C0;
+	background:url(../images/a.png);
+}
+
+.clearfix{
+	clear:both;
+}
+
+.top-level-menu
+{	display:block;
+	position:relative;
+	font:bold 16px Sans-serif;
+	height:40px;
+	width:2000px;
+	margin:0px auto;
+
+	z-index:1000;
+
+}
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.third-level-menu > li
+{
+    height: 40px;
+	background:url(../images/d.jpg);
+}
+.third-level-menu > li:hover {background:url(../images/d.jpg); }
+
+.second-level-menu
+{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 180px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 40px;
+	background:url(../images/d.jpg);
+}
+.second-level-menu > li:hover { background:url(../images/d.jpg); }
+
+
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+    height: 40px;
+    width: 250px;
+	background:url(../images/d.jpg);
+}
+.top-level-menu > li:hover { background:url(../images/d.jpg); }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 40px;
+}
+.top-level-menu a:hover { color: #FF8330;}
+
+
+
+
+.form-style-2{
+    max-width: 450px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+	color:black;
+    margin: 15px 15px auto;
+
+	
+	
+}
+.form-style-2-heading{
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.form-style-2 label{
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+    width: 100px;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+.form-style-2 span.required{
+    color:red;
+}
+.form-style-2 .tel-number-field{
+    width: 40px;
+    text-align: center;
+}
+.form-style-2 input.input-field{
+    width: 48%;
+   
+}
+
+.form-style-2 input.input-field,
+.form-style-2 .tel-number-field,
+.form-style-2 .textarea-field,
+ .form-style-2 .select-field{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+.form-style-2 .input-field:focus,
+.form-style-2 .tel-number-field:focus,
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+    border: 1px solid #0C0;
+}
+.form-style-2 .textarea-field{
+    height:100px;
+    width: 55%;
+}
+.form-style-2 input[type=submit],
+.form-style-2 input[type=button]{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #FF8500;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.form-style-2 input[type=submit]:hover,
+.form-style-2 input[type=button]:hover{
+    background: #EA7B00;
+    color: #fff;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sliderFrame, #sliderFrame div {
+    box-sizing: content-box;
+}
+#sliderFrame 
+{
+position: relative; 
+text-align:center;
+margin-right: auto;
+margin-left:auto;
+margin-top:120px;
+margin-bottom:100px;
+
+}
+
+#slider, #slider div.sliderInner {
+    width:900px;height:550px;/* Must be the same size as the slider images */
+}
+
+#slider {
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+	position:relative;
+	margin-right: auto;
+	margin-left:auto;
+	margin-top:120px;
+	margin-bottom:100px;
+    transform: translate3d(0,0,0);
+    box-shadow: 0px 1px 5px #999999;
+}
+
+/* image wrapper */
+#slider a.imgLink, #slider div.video {
+	z-index:2;
+	position:absolute;
+	top:0px;left:0px;border:0;padding:0;margin:0;
+	width:100%;height:100%;
+}
+#slider .video {
+	background:transparent url(video.png) no-repeat 50% 50%;
+}
+
+
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+/* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
+#slider div.navBulletsWrapper  {
+    top:520px;/* Its position is relative to the #slider */
+	text-align:center;
+	background:none;
+	position:relative;
+	z-index:5;
+}
+
+/* each bullet */
+#slider div.navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    font-size:0;color:White;/*hide the index number in the bullet element*/
+    background:transparent url(../js/bullet.png) no-repeat 0 0;
+    display:inline-block; *display:inline; zoom:1;
+    overflow:hidden;cursor:pointer;
+    margin:0 6px;/* set distance between each bullet*/
+}
+
+#slider div.navBulletsWrapper div.active {background-position:0 -11px;}
+
+
+/* --------- Others ------- */
+
+#slider div.loading 
+{
+    width:100%; height:100%;
+    background:transparent url(../js/loading.gif) no-repeat 50% 50%;
+    filter: alpha(opacity=60);
+    opacity:0.6;
+    position:absolute;
+    left:0;
+    top:0; 
+    z-index:9;
+}
+
+#slider img, #slider>b, #slider a>b {
+	position:absolute; border:none; display:none;
+}
+
+#slider div.sliderInner {
+	overflow:hidden; 
+	-webkit-transform: rotate(0.000001deg);/* fixed the Chrome not crop border-radius bug*/
+	position:absolute; top:0; left:0;
+}
+
+#slider>a, #slider video, #slider audio {display:none;}
+#slider div {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+
+
+
+#container{
+	width:330px;
+	min-height:400px;
+	background-image:url(../images/w.jpg);
+	overflow:auto;
+	margin:60px auto;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:#666 solid 2px;
+}
+
+#audio-image{
+	position:relative;
+	overflow:hidden;
+	height:250px;
+	margin-bottom:15px;
+}
+
+#audio-info{
+	text-align:center;
+}
+
+#audio-info .artist{
+	font-weight:bold;
+}
+
+.cover{
+	width:100%;
+	z-index:1;
+}
+
+input#volume {
+	width:95%;
+	margin-left:2%;
+    -webkit-appearance: none !important;
+    background:#ccc;
+    height:6px;
+	margin-bottom:12px;
+}
+input#volume::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:url(../images/knob.png) no-repeat;
+    height:10px;
+    width:12px;
+}
+
+#buttons{
+	width:90%;
+	display: block;
+    margin: 15px auto;
+	margin-left:12px;
+	overflow:auto;
+}
+
+button#play{
+	width:70px;
+	height:70px;
+	background:url(../images/play.png) no-repeat;float:left;
+}
+
+button#pause{
+	width:70px;
+	height:70px;
+	background:url(../images/pause.png) no-repeat;float:left;
+}
+
+button#stop{
+	width:70px;
+	height:70px;
+	background:url(../images/stop.png) no-repeat;float:left;
+}
+
+button#prev{
+	width:70px;
+	height:70px;
+	background:url(../images/prev.png) no-repeat;
+	float:left;
+	margin-top:15px;
+}
+
+button#next{
+	width:70px;
+	height:70px;
+	background:url(../images/next.png) no-repeat;
+	float:right;
+	margin-top:15px;
+}
+
+#playlist {
+    list-style-type: none;
+	padding:10px;
+}
+
+#playlist li {
+    cursor: pointer;
+    margin:5px;
+}
+
+#tracker{
+	position:relative;
+	width:100%;
+}
+
+#playlist li.active {
+    font-weight: bold;
+	padding:3px;
+	background:#666;
+}
+
+#progressBar { 
+   width:80%;
+   margin-left:2%;
+   margin-bottom:10px;
+   margin-top:11px;
+   height:10px;
+   background:url(../images/progress_bg.png) no-repeat;
+   float:left;
+}
+
+#progress {
+   background:url(../images/progress.png) no-repeat;
+   height:10px;
+   display:inline-block;
+}
+
+#duration{
+	position:absolute;
+	top:0;
+	right:10px;
+	padding:4px 8px;
+	background:#000;
+	border-radius:5px;
+}
